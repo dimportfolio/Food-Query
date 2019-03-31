@@ -1,1 +1,4 @@
-heres some chagnes to this readme text
+3/30/2019
+Established connection to Spoonacular
+Was able to pull and display the recipe images based on searched item and assign the unique recipe ID to each image
+Was able to pull the recipe title and instructions based on recipe ID
