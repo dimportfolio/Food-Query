@@ -21,10 +21,12 @@ $("#submit").on("click", function(){
         "X-RapidAPI-Key" : "36b1955be7msh1566b339f906515p10b495jsn27ecc72ce407"
       }
       }).then(function(res) {
+        //This empty method is here incase a user searches for another recipe using an ingredient
+        $("#recipeSection").empty();
         //This is a loop that is generating the recipe images
         for (i=0; i<res.results.length; i++){
           var img = $("<img>");
-          img.addClass("recipeImg");
+          img.addClass("recipeImg img-thumbnail img-fluid float-left");
           img.attr("id", res.results[i].id);
           img.attr("src", res.baseUri + res.results[i].image);
           $("#recipeSection").append(img);
